@@ -1,37 +1,79 @@
-.App {
-  text-align: center;
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  width: 100%;
+  height: 4em;
+  background-color: #EDEFEE;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  display: flex;
+  gap: 1em;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-item {
+  color: #040404;
+  font-weight: 600;
+  text-decoration: inherit;
+  font-family: 'Markazi', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+footer {
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  background-color: #EDEFEE;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex: 0.6;
+}
+
+.footer-nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-head {
+  color: #495E57;
+  font-weight: 900;
+  font-family: 'Karla';
+}
+
+.footer-item {
+  color: #040404;
+  font-weight: 400;
+  text-decoration: inherit;
+  font-size: 18px;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
