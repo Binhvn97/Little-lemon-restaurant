@@ -11,3 +11,158 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Roboto font */
+@font-face {
+  font-family: 'Roboto-Black';
+  src: local('Roboto'), url(./fonts/Roboto/Roboto-Black.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-BlackItalic';
+  src: local('Roboto'), url(./fonts/Roboto/Roboto-BlackItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: local('Roboto'), url(./fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-BoldItalic';
+  src: local('Roboto'), url(./fonts/Roboto/Roboto-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Italic';
+  src: local('Roboto'), url(./fonts/Roboto/Roboto-Italic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: local('Roboto'), url(./fonts/Roboto/Roboto-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-LightItalic';
+  src: local('Roboto'), url(./fonts/Roboto/Roboto-LightItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: local('Roboto'), url(./fonts/Roboto/Roboto-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-MediumItalic';
+  src: local('Roboto'), url(./fonts/Roboto/Roboto-MediumItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: local('Roboto'), url(./fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: local('Roboto'), url(./fonts/Roboto/Roboto-Thin.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-ThinItalic';
+  src: local('Roboto'), url(./fonts/Roboto/Roboto-ThinItalic.ttf) format('truetype');
+}
+
+/* MarkaziText font */
+
+@font-face {
+  font-family: 'MarkaziText-Bold';
+  src: local('MarkaziText'), url(./fonts/Markazi_Text/static/MarkaziText-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'MarkaziText-Medium';
+  src: local('MarkaziText'), url(./fonts/Markazi_Text/static/MarkaziText-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'MarkaziText-Regular';
+  src: local('MarkaziText'), url(./fonts/Markazi_Text/static/MarkaziText-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'MarkaziText-SemiBold';
+  src: local('MarkaziText'), url(./fonts/Markazi_Text/static/MarkaziText-SemiBold.ttf) format('truetype');
+}
+
+/* Karla font */
+
+@font-face {
+  font-family: 'Karla-Bold';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-BoldItalic';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-ExtraBold';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-ExtraBoldItalic';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-ExtraBoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-ExtraLight';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-ExtraLight.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-ExtraLightItalic';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-ExtraLightItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-Italic';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-Italic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-Light';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-LightItalic';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-LightItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-Medium';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-MediumItalic';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-MediumItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-Regular';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-SemiBold';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla-SemiBoldItalic';
+  src: local('Karla'), url(./fonts/Karla/static/Karla-SemiBoldItalic.ttf) format('truetype');
+}

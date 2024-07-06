@@ -6,8 +6,8 @@ import Nav from './Nav'
 function Header() {
     return (
         <header>
-            <Link to="/"><img src={require('../assets/logo.png')} alt="little lemon" /></Link>
-            <Nav />
+            <Link className="header-logo" to="/"><img src={require('../assets/logo.png')} alt="little lemon" /></Link>
+            <Nav className="header-nav" />
         </header>
     )
 }

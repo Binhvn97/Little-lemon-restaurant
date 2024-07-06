@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 function Footer() {
     return (
         <footer>
-            <img src={require('../assets/logo.png')} alt="little lemon" />
+            <img src={require('../assets/footer.png')} alt="little lemon" />
             <div className="footer-content">
                 <div className="footer-nav">
                     <p className="footer-head">Navigtion</p>
