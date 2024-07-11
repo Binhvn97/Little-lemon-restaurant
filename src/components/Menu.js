@@ -28,7 +28,7 @@ function Menu() {
                     </div>
                 </div>
                 <div className="card">
-                    <img className="menu-img" src="/images/bruchetta.jpg" alt="bruchetta" />
+                    <img className="menu-img" src="/images/bruchetta.svg" alt="bruchetta" />
                     <div className="name-price">
                         <p className="item-name">Bruchetta</p>
                         <p className="item-price">$5.99</p>

@@ -16,7 +16,8 @@ function Description() {
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
                 </div>
                 <div className="desc-images">
-                    <img className="desc-img" src="/images/hero.png" alt="hero-image" />
+                    <img className="desc-img desc-1" src="/images/restaurant.jpg" alt="hero-image" />
+                    <img className="desc-img desc-2" src="/images/restaurant-chef-B.jpg" alt="hero-image" />
                 </div>
             </div>
         </>
