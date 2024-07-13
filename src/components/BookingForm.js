@@ -1,28 +1,48 @@
-import { useState } from "react"
+import React, { useState } from "react";
 
 
 
-function BookingForm(availableTimes) {
-    const [formData, setFormData] = useState({
+
+function BookingForm({ availableTimes, dispatch, submitForm }) {
+    const initialState = {
         firstName: "",
         lastName: "",
         contactNumber: "",
         date: "",
-        time: "00:00",
+        time: "19:00",
         noOfGuests: 1,
         occasion: "Birthday"
-    })
+    }
+    const [formData, setFormData] = useState(initialState)
 
-    // const options = availableTimes.map(time => <option key={time}>{time}</option>)
 
     const currentDate = new Date().toISOString().split("T")[0]
+    const options = availableTimes.map(time => <option key={time}>{time}</option>)
+    const handleDateChange = async (event) => {
+        const { name, value } = event.target
 
-    const handleSubmit = () => { }
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            [name]: value
+        }))
+        dispatch({ type: 'UPDATE_TIMES', payload: value })
+    }
 
-    const handleFormChange = () => { }
+    const handleFormChange = (event) => {
+        const { name, value } = event.target
+        setFormData((prevFromValue) => ({
+            ...prevFromValue,
+            [name]: value
+        }))
+        // console.log(value);
+    }
 
-    const handleDateChange = () => { }
-
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        submitForm(formData)
+        console.log(formData);
+        setFormData(initialState)
+    }
 
     return (
         <main className="reservation-wrap">
@@ -59,8 +79,8 @@ function BookingForm(availableTimes) {
                         id="contact-number"
                         name="contactNumber"
                         placeholder="Enter your contact number..."
-                        value={formData.contactNumber} onChange={handleFormChange}
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        value={formData.contactNumber}
+                        onChange={handleFormChange}
                     />
                 </div>
                 <div className="date-time">
@@ -84,7 +104,7 @@ function BookingForm(availableTimes) {
                             onChange={handleFormChange}
                             required
                         >
-
+                            {options}
                         </select>
                     </div>
                 </div>
