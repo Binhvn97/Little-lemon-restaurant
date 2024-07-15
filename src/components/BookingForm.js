@@ -9,11 +9,18 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
         lastName: "",
         contactNumber: "",
         date: "",
-        time: "19:00",
+        time: "",
         noOfGuests: 1,
-        occasion: "Birthday"
+        occasion: "None"
     }
     const [formData, setFormData] = useState(initialState)
+    const [errors, setErrors] = useState({
+        firstName: '',
+        lastName: '',
+        contactNumber: '',
+        date: '',
+        time: '',
+    })
 
 
     const currentDate = new Date().toISOString().split("T")[0]
@@ -34,14 +41,47 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
             ...prevFromValue,
             [name]: value
         }))
-        // console.log(value);
+    }
+
+    const validate = () => {
+        let valid = true
+        const newErrors = {
+            firstName: '',
+            lastName: '',
+            contactNumber: '',
+            date: '',
+            time: '',
+        }
+        if (!formData.firstName) {
+            newErrors.firstName = 'Please enter your first name'
+            valid = false
+        }
+        if (!formData.lastName) {
+            newErrors.lastName = 'Please enter your last name'
+            valid = false
+        }
+        if (!formData.contactNumber) {
+            newErrors.contactNumber = 'Please enter your contact number'
+            valid = false
+        }
+        if (!formData.date) {
+            newErrors.date = 'Please select your date reservation'
+            valid = false
+        }
+        if (!formData.time) {
+            newErrors.time = 'Please select your time'
+            valid = false
+        }
+        setErrors(newErrors)
+        return valid
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        submitForm(formData)
-        console.log(formData);
-        setFormData(initialState)
+        if (validate()) {
+            submitForm(formData)
+            setFormData(initialState)
+        }
     }
 
     return (
@@ -57,8 +97,8 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                         placeholder="Enter your first name..."
                         value={formData.firstName}
                         onChange={handleFormChange}
-                        required
                     />
+                    {errors.firstName && (<p className="error-message">{errors.firstName}</p>)}
                 </div>
                 <div className="separate">
                     <label htmlFor="last-name">Last Name</label>
@@ -69,8 +109,8 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                         placeholder="Enter your last name..."
                         value={formData.lastName}
                         onChange={handleFormChange}
-                        required
                     />
+                    {errors.lastName && (<p className="error-message">{errors.lastName}</p>)}
                 </div>
                 <div className="separate">
                     <label htmlFor="contact-number">Contact Number</label>
@@ -82,6 +122,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                         value={formData.contactNumber}
                         onChange={handleFormChange}
                     />
+                    {errors.contactNumber && (<p className="error-message">{errors.contactNumber}</p>)}
                 </div>
                 <div className="date-time">
                     <div className="separate separate-child">
@@ -92,8 +133,9 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                             name="date"
                             value={formData.date}
                             onChange={handleDateChange}
-                            required min={currentDate}
+                            min={currentDate}
                         />
+                        {errors.date && (<p className="error-message">{errors.date}</p>)}
                     </div>
                     <div className="separate separate-child">
                         <label htmlFor="res-time">Choose time</label>
@@ -102,10 +144,11 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                             name="time"
                             value={formData.time}
                             onChange={handleFormChange}
-                            required
+                        // required
                         >
                             {options}
                         </select>
+                        {errors.time && (<p className="error-message">{errors.time}</p>)}
                     </div>
                 </div>
                 <div className="guests-occasion">
@@ -116,6 +159,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                     <div className="separate separate-child">
                         <label htmlFor="occasion">Occasion</label>
                         <select id="occasion" name="occasion" required value={formData.occasion} onChange={handleFormChange}>
+                            <option>None</option>
                             <option>Birthday</option>
                             <option>Anniversary</option>
                             <option>Engagement</option>
