@@ -381,7 +381,7 @@ form {
 .separate {
   display: flex;
   flex-direction: column;
-  margin: 10px 10px;
+  margin: 10px 10px 0px 10px;
 
   >label {
     font-family: 'Karla-Bold';
@@ -397,6 +397,13 @@ form {
     border: solid .2px #a6a7a6;
     padding: 10px 10px;
     cursor: pointer;
+  }
+
+  p.error-message {
+    color: red;
+    font-size: 18px;
+    font-family: 'MarkaziText-Regular';
+    margin: 0px 10px;
   }
 }
 
