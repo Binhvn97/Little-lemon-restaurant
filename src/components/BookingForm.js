@@ -144,7 +144,6 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                             name="time"
                             value={formData.time}
                             onChange={handleFormChange}
-                        // required
                         >
                             {options}
                         </select>
